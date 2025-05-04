@@ -1,0 +1,24 @@
+def longSequence(n,nums,x):
+
+    sequence_sum = sum(nums)
+    fit_inside_x = x// sequence_sum
+    total_sum_so_far = sequence_sum* fit_inside_x
+    element_count = fit_inside_x * n 
+
+
+    for i in range(n):
+        if nums[i]+ total_sum_so_far <= x:
+            total_sum_so_far += nums[i]
+            element_count +=1
+
+        else:
+            element_count +=1 
+            break
+    return element_count   
+
+
+
+n  = int(input())
+array = list(map(int,input().split()))
+x = int(input())
+print(longSequence(n,array,x))
