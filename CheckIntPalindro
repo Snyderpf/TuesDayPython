@@ -1,0 +1,15 @@
+def checkPalindrone(number):
+    if number == number[::-1]:
+        return "Yes"
+    new_string  = "0" + number 
+    if new_string == new_string[::-1]:
+        return "Yes"
+    else:
+        return "No"
+  
+number = input()
+print(checkPalindrone(number))
+
+
+
+
