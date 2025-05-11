@@ -1,0 +1,13 @@
+
+
+def lubaChores(n,k,x,a):
+    sumFirstHalf = sum(a[:n-k])
+    timeSpent = k*x
+    return sumFirstHalf + timeSpent
+
+
+
+
+n,k,x = map(int,input().split())
+a = list(map(int,input().split()))
+print(lubaChores(n,k,x,a))
